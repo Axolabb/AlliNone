@@ -1,0 +1,106 @@
+/* ------------------------56 Урок------------------------- */
+body{
+    height: 300vh;
+    background: rgb(37, 37, 37);
+    color: white;
+    font-family: sans-serif;
+    font-weight: 100;
+    
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 100px;
+}
+.block {
+    background-image: url("https://img2.freepng.ru/20180821/rpb/kisspng-drawing-gold-coin-vector-graphics-adobe-photoshop-4-ways-to-hack-pes-2-18-game-hack-online-coins-and-5b7c85c99745e4.5371356015348873696196.jpg");
+    background-position: center;
+    width: 440px;
+    height: 440px;
+    border-radius: 50%;
+    transition: 0.5 ease-in-out;
+}
+.block:active{   
+    transform: scale(1.5) translateY(-100px) rotateX(180deg);
+    transition: 0.5s;
+    background-color:rgb(202, 202, 202);;
+}
+.block:not(:active) {
+    transform: scale(1);
+    transition: 0.5s;
+    background-color: rgb(155, 155, 155);
+}
+/* ------------------------57 Урок------------------------- */
+.title {
+    display: flex;
+    justify-content: center;
+}
+.title::before {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(233, 74, 74);
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-right: 50px;
+}
+.title::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(90, 74, 233);
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-left: 50px;
+}
+/* ------------------------58 Урок------------------------- */
+.cube {
+    position:relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: rgb(88, 88, 88);
+    height: 300px;
+    width: 400px;
+    border-radius: 5%;
+}
+.succes {
+    color: lightgreen;
+    font-size: 2rem;
+    opacity: 0;
+}
+.working {
+    background-color: white;
+    height: 50px;
+    width: 1px;
+    left: -300px;
+    position: absolute;
+    transform: translateY(-250px);
+    opacity: 0;
+}
+.cube:active {
+    .succes {
+        opacity: 1;
+        transition: opacity .5s ease-in-out 5s;
+    }
+    .working {
+        width: 1000px;
+        opacity: 1;
+        transition: width 5s ease-in-out;
+    }
+}
+.cube:not(:active) {
+    .succes {
+        opacity: 0;
+        transition: opacity .5s ease-in-out 1s;
+    }
+    .working {
+        width: 1px;
+        opacity: 0;
+        transition: all 5s ease-in-out;
+    }
+}
